@@ -1,0 +1,92 @@
+#input{
+    display:flex;
+    flex-direction: column;
+    margin-left: 550px;
+    margin-top: 100px;
+    
+}
+
+$length:30vh;
+$height:30px;
+$space:30px;
+$float:center;
+$font:15px;
+$margin:30px;
+
+#zip  {
+width:$length;
+height:$height;
+margin-top: $space;
+text-align: $float;
+font-size: $font;
+margin-left: $margin;
+}
+#date{
+    width:$length;
+    height:$height;
+    margin-top: $space;
+    text-align: $float;
+    font-size: $font;
+    margin-left: $margin;
+}
+#end{
+    width:$length;
+    height:$height;
+    margin-top: $space;
+    text-align: $float;
+    font-size: $font;
+    margin-left: $margin;
+}
+#submit{
+    width:20vh;
+    height:$height;
+    margin-top: $space;
+    border-radius: 20px;
+    margin-left: 70px;
+    font-size: $font;
+    background-color: greenyellow;
+}
+#removeTrip{
+    width:20vh;
+    height:$height;
+    margin-top: $space;
+    border-radius: 20px;
+    margin-left: 70px;
+    font-size: $font;
+    background-color: greenyellow;
+}
+
+#entryHolder{
+    display: flex;
+    background:transparent;
+    float:center;
+    text-align: center;
+    width: 110vh;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    background-color: rgb(14, 236, 217);
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    text-align:center ;
+    margin:25px;
+    justify-content: center;
+    margin-left: 100px;
+    font-size: 20px;
+}
+.gap{
+    margin-right: 30px;
+}
+
+#image1{
+height:200px;
+width:250px;
+}
+#content{
+float:right;
+margin-left: 40px;
+width:600px;
+height: 350px;
+font-size: 20px;
+}
