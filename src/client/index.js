@@ -13,5 +13,4 @@ export {
     buttonHandler,
     performAction, fetchWeather, postData, updateUI, postData1, updateUI1, getClimate,
     postData2, updateUI2, getimage,
-
 }

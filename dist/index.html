@@ -2,57 +2,71 @@
 <html>
 
 <head>
-   
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Travel app</title>
-    
+
 <link href="main.css" rel="stylesheet"></head>
 
 <body>
-    <div id="photo">
-    <header class="url">Travel Planner</header>
-
     <div id="travel">
-        
-        <div id="input" class="url">
-            <input type="text" id="zip" size="30" placeholder="enter city name here">
-            <input type="text" id="date" size="30" placeholder="enter starting date">
-            <input type="text" id="end" size="30" placeholder="enter end date">
-            <button type="submit" id="submit"  size="100">Submit</button>
-            <button id="removeTrip" type="button">Remove trip</button>
+        <header class="url">Travel Planner App</header>
+
+        <div class="side"></div>
+
+        <div class="box">
+
+            <div id="photo">
+                <div id="input" class="url">
+                    <input type="text" id="zip" size="30" placeholder="Enter city name here">
+                    <input type="text" id="date" size="30" placeholder="Enter starting date">
+                    <input type="text" id="end" size="30" placeholder="Enter end date">
+                    <button type="submit" id="submit" size="100">Submit</button>
+                    <button id="removeTrip" type="button">Remove trip</button>
+                </div>
+
+            </div>
+
+            <div id="entryHolder">
+                <div id="test"></div>
+                <div id="content">
+                    <p id="cityName"></p>
+                    <br>
+                    <p id="departing"></p>
+                    <br>
+
+                    <div class="flex">
+                        <p id="high" class="gap"></p>
+                        <p id="low" class="gap"></p>
+                    </div>
+                    <div class="flex">
+                        <p id="lat" class="gap"></p>
+                        <p id="longtitude" class="gap"></p>
+                    </div>
+                    <p id="summary"> </p>
+                    <br>
+                    <p id="countdown"></p>
+                    <p id="lengthoftrip"></p>
+                </div>
+            </div>
+
         </div>
-    </div>
 
-    <button id="addtrip" type="button"> +addtrips</button>
+        <div class="side1"></div>
 
-        <div id="entryHolder">
-            <div id="test"></div>
-            <div id="content"> 
-        <p id="cityName"></p><br>
-        <p id="departing"></p><br>
-        
-        <p>Typical weather there:</p>
-        <div class="flex">
-        <p id="high" class="gap">high:</p>
-        <p id="low" class="gap">low:</p>
+        <footer class="foot"></footer>
     </div>
-        <div class="flex">
-        <p id="lat" class="gap">latitude:</p>
-        <p id="longtitude" class="gap">longtitude:</p>
-    </div>
-        <p id="summary"> </p><br>
-        <p id="countdown"></p>
-        <p id="lengthoftrip"></p>
-        
-        
-           </div>
-        </div>
-        
-    </div>
-
-    <footer>copyright @revathikumar</footer>
-    
-    
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 <script type="text/javascript" src="main.js"></script></body>
 
 </html>

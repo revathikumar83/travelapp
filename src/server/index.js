@@ -79,8 +79,8 @@ function addWeather(req, res) {
 app.post('/add1', addWeather1);
 
 function addWeather1(req, res) {
-  projectData1['longtitude'] = req.body.longtitude;
-	projectData1['latitude'] = req.body.latitude;
+    projectData1['longtitude'] = req.body.longtitude;
+    projectData1['latitude'] = req.body.latitude;
 	projectData1['temp'] = req.body.temp;
 	projectData1['summary'] = req.body.summary;
 	projectData1['hightemp'] = req.body.hightemp;

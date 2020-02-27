@@ -7,7 +7,7 @@ function buttonHandler(event) {
     document.getElementById('content').textContent = '';
     document.getElementById('test').textContent = '';
     document.getElementsByClassName('gap').textContent='';
-
+    document.getElementById('entryHolder').textContent = '';
 }
 document.getElementById('removeTrip').addEventListener('click', () => buttonHandler(event));
 

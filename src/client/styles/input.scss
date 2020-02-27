@@ -1,9 +1,10 @@
 #input{
     display:flex;
     flex-direction: column;
-    margin-left: 550px;
-    margin-top: 100px;
-    
+    margin-left: 350px;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    width:100%;
 }
 
 $length:30vh;
@@ -11,9 +12,9 @@ $height:30px;
 $space:30px;
 $float:center;
 $font:15px;
-$margin:30px;
+$margin:60px;
 
-#zip  {
+%message-shared {
 width:$length;
 height:$height;
 margin-top: $space;
@@ -21,51 +22,40 @@ text-align: $float;
 font-size: $font;
 margin-left: $margin;
 }
+#zip  {
+    @extend %message-shared;
+}
 #date{
-    width:$length;
-    height:$height;
-    margin-top: $space;
-    text-align: $float;
-    font-size: $font;
-    margin-left: $margin;
+    @extend %message-shared;
 }
 #end{
-    width:$length;
+    @extend %message-shared;
+}
+%message-shared1 {
+    width:20vh;
     height:$height;
     margin-top: $space;
-    text-align: $float;
+    border-radius: 20px;
+    margin-left: 100px;
     font-size: $font;
-    margin-left: $margin;
+    background-color: greenyellow;
 }
 #submit{
-    width:20vh;
-    height:$height;
-    margin-top: $space;
-    border-radius: 20px;
-    margin-left: 70px;
-    font-size: $font;
-    background-color: greenyellow;
+    @extend %message-shared1; 
 }
 #removeTrip{
-    width:20vh;
-    height:$height;
-    margin-top: $space;
-    border-radius: 20px;
-    margin-left: 70px;
-    font-size: $font;
-    background-color: greenyellow;
+    @extend %message-shared1;
 }
 
 #entryHolder{
     display: flex;
-    background:transparent;
     float:center;
     text-align: center;
-    width: 110vh;
     margin-left: 200px;
-    margin-bottom: 100px;
+    margin-top: 50px;
     background-color: rgb(14, 236, 217);
 }
+
 .flex{
     display: flex;
     flex-direction: row;
@@ -84,9 +74,64 @@ height:200px;
 width:250px;
 }
 #content{
-float:right;
+background-color: rgb(72, 113, 133);
+color: white;
 margin-left: 40px;
 width:600px;
 height: 350px;
 font-size: 20px;
 }
+
+ .side{
+      grid-area: sd;
+    }
+    .side1{
+        grid-area: sp;
+    }
+    .box{
+      grid-area: main;
+      margin-left: 150px;
+    margin-right: 150px;
+    }
+  
+    /* mobile screens */
+    body{
+        display:grid;
+        background: url('https://storage.needpix.com/rsynced_images/the-scenery-2689342_1280.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        border: 2px gray;
+        grid-gap: 10px;
+        grid-template-areas: "hd " "sd" "main" "sp" "ft";
+          /* Use grid-template-area to create a mobile layout where each named space occupies its own row */
+        }
+        
+        
+  /* If Screen Is Wide Enough */
+  @media(min-width:600px) and (max-width:1100px){
+  body{
+        display:grid;
+        grid-template-rows: 50px 800px 50px;
+        grid-template-columns: 60px 300px 60px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd"
+        "sd main main main main sp"
+        "ft ft ft ft ft ft";
+        grid-gap: 10px;
+     }
+  }
+  /* big screen*/
+  @media(min-width:1101px){
+    body{
+          display:grid;
+          grid-template-rows: 50px 800px 50px;
+          grid-template-columns: 70px 300px 70px;
+          grid-template-areas: 
+          "hd hd hd hd hd hd"
+          "sd main main main main sp"
+          "ft ft ft ft ft ft";
+           grid-gap: 10px;
+        }
+    }
+

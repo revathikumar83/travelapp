@@ -9,7 +9,11 @@ let pixa = `https://pixabay.com/api?key=15184331-3e9eed908ecfed85c90731c29&image
 
 
 
+
+
 document.getElementById('submit').addEventListener('click', performAction);
+
+
 
 function performAction(event) {
 	event.preventDefault();
@@ -17,6 +21,7 @@ function performAction(event) {
 	const zip = document.getElementById('zip').value;
 	countdowny();
 	//dateDifference();
+	
 
   fetchWeather(geoURL, zip )
   
@@ -25,7 +30,7 @@ function performAction(event) {
 			// Add data
 			console.log(userData);
 			postData('http://localhost:3000/add', {
-				date: newDate,
+				
 				lng: userData.postalCodes[0].lng,
 				lat: userData.postalCodes[0].lat,
 				placeName: userData.postalCodes[0].placeName
@@ -46,7 +51,7 @@ getClimate(darkSky, zip )
 			postData1('http://localhost:3000/add1', {
 				latitude:userData.latitude,
 				longtitude:userData.longtitude,
-				summary: userData.currently.summary,
+				summary:userData.currently.summary,
 				temp: userData.currently.temperature,
 				hightemp: userData.currently.apparentTemperature
 			});
@@ -70,7 +75,9 @@ getClimate(darkSky, zip )
 		updateUI2()
 	)
 	
+
 }
+
 /* countdown days*/
 function countdowny(){
 	
@@ -178,7 +185,7 @@ const fetchWeather = async(geoURL,zip) => {
 
 const getClimate = async(darkSky,latitude,longtitude) => {
 	 
-	const res = await fetch(`https://api.darksky.net/forecast/b40dae4064cbd57a813f236aa8a5b3fe/${latitude},${longtitude}?exclude=hourly,minutely,flags,alerts&units=si`)
+	const res = await fetch(`https://api.darksky.net/forecast/b40dae4064cbd57a813f236aa8a5b3fe/${latitude=-11.27},${longtitude=-7.58}?exclude=hourly,minutely,flags,alerts&units=si`)
 	try {
 		const data = await res.json();
 
@@ -242,9 +249,6 @@ const updateUI2 = async() => {
 		console.log("error", error);
 	}
 }
-/* adding trip*/
-document.getElementById('addtrip').addEventListener('click', performAction);
-
 
 
 module.exports = {performAction, fetchWeather, postData, updateUI, getClimate, postData1, updateUI1, postData2, updateUI2, getimage, };
