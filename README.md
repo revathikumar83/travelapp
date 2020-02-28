@@ -1,31 +1,38 @@
-Project Overview:
-Project Instructions
-Development
-Running with the 3-Party-APIs
-Extend Options
-Project Instructions:
-This repo is the code for the project FEND Capstone - Travel App. The project contains webpack configurations, express server which connect to 3 different 3-Party-APIs to get the necessary data. The code was produced as the requirements were understood in the development guide and project requirements.
+Travel Planner App Project:::
 
-The goal of this project is to give you practice with:
+   RevathiKumar - Udacity Front End Dev final project (Weather App)
 
-Setting up Webpack
-Sass styles
-Webpack Loaders and Plugins
-Creating layouts and page design
-Service workers
-Using APIs and creating requests to external urls
-all learned techniques
-Development
-Don't forget to run npm i in the beginning to install all needed modules.
 
-To start development you simply run npm start for running the server and npm run dev to run the webpack-dev-server for the UI part.
+   This is a project that excercised my ability to navigate through the module bundler, 'Webpack'. The result of which is a weather app and express/ node.js driven application. This excercise application utilises 3 API's, dependant upon one another.
 
-Additionally I recommend to run in a separate terminal window npm t -- --watch to run the test suits in parallel in watch-mode. So you're able to see if you break core functionality.
+What this project encompassses:
+   * Webpack entry point
+   * Webpack output and dist folder
+   * Webpack Loaders
+   * Webpack Plugins
+   * Webpack Mode
+   * Tools for convenient Webpack development
+   * Sass, html, css, packagr.json, prod/dev webpack configurations
+   * service worker
 
-Running with the 3-Party-APIs:
-To run the server with the 3-Party-APIs you need an API Key or username and a baseUrl in an .env file. GEO_BASEURL and GEO_USERNAME for the Geonames API, DARKSKY_APIKEY and DARKSKY_BASEURL for the DarkSky API & PIXABAY_KEY and PIXABAY_BASEURL for the Pixabay API
 
-Now you're able to run the server with the 3-Party-APIs to everything you need for the Trip planning.
+How to run:
 
-Extend Options:
-The extend options which was implemented is the remove a trip functionality
+Terminal NPM start
+
+"start": "npm run client-prod && npm run server-prod",
+
+following which, in the browser, go to http://localhost:3000/ to recieve the application.
+To run this app, the server must be actioned through, 'npm run start', not through the index.js server directory as this will omit the api key. Then an instance of webpack must be run in the terminal, upon doing so the application should open within a browzer window. uSE, 'Webpack build-dev' to access the development build or, 'Webpack build-prod' t oaccess the finished production application.
+
+npm run start (to instance the server)
+
+npm run build-dev (to run the development mode of the app)
+
+npm run build-prod (to run the production mode of the app)
+
+Upon downloading the app file you will also need to cd into the folder and:
+
+  * npm install
+  * npm start to start the app
+  * this app runs on localhost:3000, but you can of course edit that in server.js
