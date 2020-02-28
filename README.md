@@ -1,6 +1,6 @@
 Travel Planner App Project:::
 
-   RevathiKumar - Udacity Front End Dev final project (Weather App)
+   RevathiKumar - Udacity Front End Dev final project (Travel Planner App)
 
 
    This is a project that excercised my ability to navigate through the module bundler, 'Webpack'. The result of which is a weather app and express/ node.js driven application. This excercise application utilises 3 API's, dependant upon one another.
@@ -23,7 +23,7 @@ Terminal NPM start
 "start": "npm run client-prod && npm run server-prod",
 
 following which, in the browser, go to http://localhost:3000/ to recieve the application.
-To run this app, the server must be actioned through, 'npm run start', not through the index.js server directory as this will omit the api key. Then an instance of webpack must be run in the terminal, upon doing so the application should open within a browzer window. uSE, 'Webpack build-dev' to access the development build or, 'Webpack build-prod' t oaccess the finished production application.
+To run this app, the server must be actioned through, 'npm run start', not through the index.js server directory as this will omit the api key. Then an instance of webpack must be run in the terminal, upon doing so the application should open within a browzer window. use, 'Webpack build-dev' to access the development build or, 'Webpack build-prod' t oaccess the finished production application.
 
 npm run start (to instance the server)
 
